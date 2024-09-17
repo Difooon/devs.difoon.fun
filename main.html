@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FRZ | Home</title>
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/svg.css">
+    <script src="/js/routes.js"></script>
+</head>
+<body>
+        <div class="name">
+            <h1 id="nameText">FRZ DEVS</h1>
+        </div>
+
+        <div class="text">
+            <p id="social" class="social">FRZ Devs</p>
+            <p id="open" class="open">убираем границы</p>
+        </div>
+        <div class="main">
+            <div class="links">
+                <div class="dc">
+                    <object data="svg/dc.svg" type="image/svg+xml"></object>
+                    <a href="https://discord.gg/4SSEQX2X48">Discord</a>
+                </div>
+                <div class="tg">
+                    <object data="svg/tg.svg" type="image/svg+xml"></object>
+                    <a href="https://t.me/frzteams">Telegram</a>
+                </div>
+                <div class="github">
+                    <object data="svg/gh.svg" type="image/svg+xml"></object>
+                    <a href="https://github.com/Difooon">Github DIFOON</a>
+                </div>
+            </div>
+        </div>  
+
+        <div class="teams">
+            <h1 id="frzteam">FRZ Team is:</h1>
+        </div>
+        <div class="cards-container">
+            <div class="card"><img src="./image/DIFOON.jpg" alt="avatar" class="icon1"><div class="card-content"><h3>DIFOON</h3><p>Основатель FRZ. Создатель этого сайта и так же разработчик различных ботов-сайтов. Также дизайнер. ㅤㅤㅤㅤhttps://difoon.fun/</p><a href="https://t.me/difoon_bot" id="" target="_blank" rel="noopener noreferrer">Написать</a></div></div>    
+            <div class="card"><img src="./image/cookielast.png" alt="avatar" class="icon1"><div class="card-content"><h3>Cookielast</h3><p>Участник команды FRZ. Написал свой сайт на React, пишет ботов, хороший дизайнер. Сайт: ㅤㅤㅤhttps://cookielast.fun/</p><a href="https://t.me/ya_nightmare" id="" target="_blank" rel="noopener noreferrer">Написать</a></div></div>
+        </div>
+
+        <div class="projects">
+            <h1 id="project">Our projects:</h1>
+        </div>
+
+        <div class="cards-container">
+            <div class="card"><img src="./image/DIFOON.jpg" alt="avatar" class="icon1"><div class="card-content"><h3>difoon.fun</h3><p>Био сайт для difoon. Исходный код есть на гитхабе. Довольно простой но красив. Языки: HTML, CSS, JAVASCRIPT </p><a href="https://difoon.fun/" id="" target="_blank" rel="noopener noreferrer">Перейти на сайт</a></div></div>    
+            <div class="card"><img src="./image/cookielast.png" alt="avatar" class="icon1"><div class="card-content"><h3>cookielast.fun</h3><p>Био сайт для cookielast. Исходный код недоступен. Довольно простой но красив. Языки: JAVASCRIPT, REACT </p><a href="https://cookielast.fun" id="" target="_blank" rel="noopener noreferrer">Перейти на сайт</a></div></div>
+            <div class="card"><img src="./image/DIFON_FB.png" alt="avatar" class="icon1"><div class="card-content"><h3>difoon feedback</h3><p>Бот для обратной связи с difoon. Исходный код на гитхабе Difooon. Простой функционал, быстрый, удобный.</p><a href="https://t.me/difoon_bot" id="" target="_blank" rel="noopener noreferrer">Попробывать</a></div></div>
+        </div>
+
+
+</body>
+<script>
+        function getRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    let colorInterval;
+
+    document.querySelector('.name').addEventListener('mouseenter', function() {
+        const nameText = document.getElementById('nameText');
+        
+        colorInterval = setInterval(() => {
+            nameText.style.color = getRandomColor();
+        }, 400);  
+    });
+
+    document.querySelector('.name').addEventListener('mouseleave', function() {
+        const nameText = document.getElementById('nameText');
+        
+        clearInterval(colorInterval); 
+        nameText.style.color = 'white';
+    });
+</script>
+</html>
